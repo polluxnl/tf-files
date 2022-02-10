@@ -1,5 +1,5 @@
 variable "vm_name" {
-  description = "VM Name"
+  description = "VM Name Updated"
   default     = "myVM"
 }
 
