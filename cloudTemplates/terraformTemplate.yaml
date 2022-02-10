@@ -1,0 +1,25 @@
+inputs:
+  vm_name:
+    type: string
+    default: myVM
+    description: VM Name
+  myTag:
+    type: string
+    default: terraform-test
+    description: My Default Tag
+resources:
+  terraform:
+    type: Cloud.Terraform.Configuration
+    properties:
+      variables:
+        vm_name: '${input.vm_name}'
+        myTag: '${input.myTag}'
+      providers:
+        - name: azurerm
+          # List of available cloud zones: djpollux-Azure/westeurope
+          cloudZone: djpollux-Azure/westeurope
+      terraformVersion: 0.12.29
+      configurationSource:
+        repositoryId: e7251c51-b60d-4229-ba8a-74ff0d42fe74
+        commitId: 171dbe5123ec02f89fab5d0436de72fc7dd4dd6c
+        sourceDirectory: azure
