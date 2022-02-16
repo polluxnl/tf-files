@@ -1,6 +1,6 @@
 variable "vm_name" {
   description = "VM Name Updated"
-  default     = "myVM"
+  default     = "myAzureVM"
 }
 
 variable "myTag" {
